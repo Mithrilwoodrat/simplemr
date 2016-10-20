@@ -30,5 +30,6 @@ func Reduce(key string, values []string) string {
 }
 
 func main() {
-	mapreduce.RunSingle(5, 3, os.Args[1], Map, Reduce)
+	//mapreduce.Sequential(5, 3, os.Args[1], Map, Reduce)
+	mapreduce.Parallel(5, 3, os.Args[1], Map, Reduce)
 }
